@@ -7,13 +7,15 @@
 				<TITLE>Asprise OCR Result of <xsl:value-of select="@input"/>
 				</TITLE>
 				<style>
-  body   {background-color:lightgray; font-family: arial;}
-  div.page   {background-color: white; border: outset 3px #666;}
+  body   {background-color:lightgray; font-family: arial; }
+  div.page   {background-color: white; border: outset 3px #666;  background-image: url("<xsl:value-of select="@input"/>");  background-repeat: no-repeat; }
   div.pageNo {position: absolute; right: 10px; top: 10px; font-size: 24px; color: #f09; font-style: italic;}
   
   a.block {display: block; position: absolute; border: solid 1px #9df; margin: 0px; padding: 0px; overflow: visible;}
   a.block:hover {background-color: #def; border: solid 1px #39d;}
-  a.block:hover span {background-color: #def; z-index: 999;}
+  a.block:hover span {background-color: #def; color: #000; font-size: 1.0em; z-index: 999;}
+  
+  a.block span {color: transparent;}
   a.block div.info {position: absolute; right: 0px; top: 0px; color: #33f; font-size: medium;}
   
   a.cell {position: absolute; border: dotted 1px #3c3; }
