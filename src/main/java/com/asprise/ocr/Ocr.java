@@ -23,7 +23,7 @@ import com.asprise.ocr.util.StringUtils;
 import com.asprise.ocr.util.Utils;
 
 import javax.imageio.ImageIO;
-import javax.swing.JOptionPane;
+//CIRO: import javax.swing.JOptionPane;
 import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.FileOutputStream;
