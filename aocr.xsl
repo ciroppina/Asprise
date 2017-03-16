@@ -8,7 +8,7 @@
 				</TITLE>
 				<style>
   body   {background-color:lightgray; font-family: arial; }
-  div.page   {background-color: white; border: outset 3px #666;  background-image: url("<xsl:value-of select="@input"/>");  background-repeat: no-repeat; }
+  div.page   {background-color: white; border: outset 3px #666;  background-image: url("file:///<xsl:value-of select="@input"/>");  background-repeat: no-repeat; }
   div.pageNo {position: absolute; right: 10px; top: 10px; font-size: 24px; color: #f09; font-style: italic;}
   
   a.block {display: block; position: absolute; border: solid 1px #9df; margin: 0px; padding: 0px; overflow: visible;}
