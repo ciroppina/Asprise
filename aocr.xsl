@@ -2,13 +2,14 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method='html' version='1.0' encoding='utf-8' indent='yes'/>
 	<xsl:template match="/asprise-ocr">
+		<xsl:variable name="slashedPath" select="translate(@input,'\','/')"/>
 		<HTML>
 			<HEAD>
 				<TITLE>Asprise OCR Result of <xsl:value-of select="@input"/>
 				</TITLE>
 				<style>
   body   {background-color:lightgray; font-family: arial; }
-  div.page   {background-color: white; border: outset 3px #666;  background-image: url("file:///<xsl:value-of select="@input"/>");  background-repeat: no-repeat; }
+  div.page   {background-color: white; border: outset 3px #666;  background-image: url("file:///<xsl:value-of select="$slashedPath"/>");  background-repeat: no-repeat; }
   div.pageNo {position: absolute; right: 10px; top: 10px; font-size: 24px; color: #f09; font-style: italic;}
   
   a.block {display: block; position: absolute; border: solid 1px #9df; margin: 0px; padding: 0px; overflow: visible;}
